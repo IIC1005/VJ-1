@@ -1,23 +1,24 @@
 import pygame
-from pygame.locals import (
-    K_UP, K_DOWN, K_LEFT, K_RIGHT, RLEACCEL)
+from pygame.locals import K_DOWN, K_LEFT, K_RIGHT, K_UP
 
-JorgePNG = pygame.image.load('assets/JorgeVJ.png')
+JorgePNG = pygame.image.load("assets/JorgeVJ.png")
 JorgePNG_scaled = pygame.transform.scale(JorgePNG, (80, 80))
 
+
 class Player(pygame.sprite.Sprite):
-    def __init__(self, screen):
-        # nos permite invocar métodos o atributos de Sprite
-        super(Player, self).__init__()
-        self.surf = JorgePNG_scaled
-        self.surf.set_colorkey((0, 0, 0), RLEACCEL)
-        self.rect = self.surf.get_rect()
+    def __init__(self, screen, *groups):
+
+        # ? super().__init__() llama al constructor de la clase padre (Sprite) para inicializar el objeto correctamente
+        # ? Aprovechamos de pasarle los grupos a los que pertenece para que pygame lo maneje automáticamente
+        super().__init__(*groups)
+
+        self.image = JorgePNG_scaled
+        self.rect = self.image.get_rect()
         self.screen_width = screen.get_width()
         self.screen_height = screen.get_height()
 
     def update(self, pressed_keys):
-        # POR HACER (2.5): Mover a Jorge
+        # TODO (2.5): Mover a Jorge
 
-        # POR HACER (2.5): Mantener a Jorge en Pantalla
-
-        pass
+        # TODO: Mantener a Jorge en Pantalla
+        ...

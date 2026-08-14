@@ -1,6 +1,6 @@
-import scenes.basic_scene as basic_scene
-import scenes.game_scene as game_scene
 import pygame
+
+from scenes import basic_scene, game_scene
 
 """ Inicializamos PYGAME"""
 pygame.init()
@@ -12,8 +12,7 @@ SCREEN_HEIGHT = 700
 # 2.-  Creamos nuestro objeto pantalla
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
-"""Aqui se ejecutaran las escenas del juego en orden"""
+# Aqui se ejecutaran las escenas del juego en orden
 basic_scene.gameloop(screen)
-# POR HACER (2.2): Añadir nueva escena de juego
 
-
+# TODO (2.2): Añadir nueva escena de juego

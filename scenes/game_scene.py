@@ -1,73 +1,62 @@
-if __name__ == "__main__": # Solo para que no ejecutes este archivo
+if __name__ == "__main__":  # ! Solo para que no ejecutes este archivo
     import sys
+
     print(
-        "\033[38;2;255;0;0mESTE MODULO NO DEBE EJECUTARSE. EJECUTAR main.py\033[0m\n"
+        "\033c"
+        + "\033[38;2;255;0;0mESTE ARCHIVO NO DEBE EJECUTARSE. EJECUTAR main.py\033[0m\n"
         * 3
     )
     sys.exit()
 
 import pygame
-
-from pygame.locals import (K_ESCAPE, KEYDOWN, QUIT)
-
-from elements.player import Player
+from pygame.locals import K_ESCAPE, KEYDOWN, QUIT
 
 from elements.enemy import Enemy
+from elements.player import Player
 
+# * Preparamos la escena de juego, cargando los elementos que se van a usar en el loop principal
 
-"""
-Este es el modulo game_scene, aqui se encuentra 
-la escena en donde ocurre nuestro juego
-"""
+# TODO (2.4): Añadir fondo del display
+background_image = ...
+
+# TODO (2.6): Crear los grupos de sprites
+enemies = ...
+all_sprites = ...
+
+# TODO (2.6): Crear la instancia de jugador
+player = ...
+
+# TODO (2.7): Crear el generador de enemigos
+ADDENEMY = ...
+
+# TODO (2.8): Crear el reloj del juego
+clock = ...
 
 
 def gameloop(screen):
-    ''' Definimos el fondo de nuestra escena'''
-    # POR HACER (2.4): añadir fondo del display
+    running = True  # variable booleana para manejar el loop
 
-    ''' Preparamos el gameloop '''
-    # POR HACER (2.8): Crear el reloj del juego
-    clock = None
-
-    # POR HACER (2.7): Generador de enemigos
-    ADDENEMY = None
-
-    # POR HACER (2.6): Creamos la instancia de jugador
-    player = None
-
-    # POR HACER (2.6): Creamos los grupos de sprites
-    enemies = None
-    all_sprites = None
-
-    ''' hora de hacer el gameloop '''
-    # variable booleana para manejar el loop
-    running = True
-
-    # GAME LOOP: loop principal del juego
+    # * Loop principal del juego, todo lo que ocurre en el juego se hace dentro de este loop
     while running:
-        # POR HACER (2.4): Dibujar la imagen en la ventana
+        # TODO (2.4): Dibujar la imagen en la ventana
 
-        # iteramos sobre cada evento en la cola
+        # Iteramos sobre cada evento en la cola
         for event in pygame.event.get():
-            # se presiono una tecla?
-            if event.type == KEYDOWN:
-                # era la tecla de escape? -> entonces terminamos
-                if event.key == K_ESCAPE:
-                    running = False
+            if event.type == KEYDOWN:  # se presiono una tecla?
+                if event.key == K_ESCAPE:  # era la tecla de escape?
+                    running = False  # terminamos el loop
 
-            # fue un click al cierre de la ventana? -> entonces terminamos
-            elif event.type == QUIT:
-                running = False
+            elif event.type == QUIT:  # fue un click al cierre de la ventana?
+                running = False  # terminamos el loop
 
-            # POR HACER (2.7): Generar enemigos
+            # TODO (2.7): Generar enemigos
 
+        # TODO (2.6): Actualizar el estado interno de los sprites (posiciones, etc)
 
-        # POR HACER (2.6): Actualizar los sprites
+        # TODO (2.6): Dibujar los sprites actualizados en la ventana
 
-        # POR HACER (2.6): Dibujar los sprites
+        # TODO (2.9): Calcular colisiones entre jugador y enemigos
 
-        # POR HACER (2.9): Colisiones
+        # TODO (2.4): Actualizar la ventana para reflejar todos los cambios
 
-        # POR HACER (2.4): Actualizar la ventana con lo dibujado
-
-        # POR HACER (2.8): Controlar la velocidad de fotogramas
+        # TODO (2.8): Controlar la velocidad de fotogramas
