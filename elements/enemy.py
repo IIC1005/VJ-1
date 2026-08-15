@@ -7,11 +7,10 @@ BUGpng_scaled = pygame.transform.scale(BUGpng, (64, 64))
 
 
 class Enemy(pygame.sprite.Sprite):
-    def __init__(self, screen, *groups):
+    def __init__(self, screen):
 
         # ? super().__init__() llama al constructor de la clase padre (Sprite) para inicializar el objeto correctamente
-        # ? Aprovechamos de pasarle los grupos a los que pertenece para que pygame lo maneje automáticamente
-        super().__init__(*groups)
+        super().__init__()
 
         self.image = BUGpng_scaled
         self.rect = self.image.get_rect(
@@ -29,4 +28,4 @@ class Enemy(pygame.sprite.Sprite):
         # TODO (2.5): Mover a los enemigos
 
         # TODO (2.5): Destruir a los enemigos
-        ...
+        pass

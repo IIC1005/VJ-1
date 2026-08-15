@@ -14,31 +14,31 @@ from pygame.locals import K_ESCAPE, KEYDOWN, QUIT
 from elements.enemy import Enemy
 from elements.player import Player
 
-# * Preparamos la escena de juego, cargando los elementos que se van a usar en el loop principal
-
-# TODO (2.4): Añadir fondo del display
-background_image = ...
-
-# TODO (2.6): Crear los grupos de sprites
-enemies = ...
-all_sprites = ...
-
-# TODO (2.6): Crear la instancia de jugador
-player = ...
-
-# TODO (2.7): Crear el generador de enemigos
-ADDENEMY = ...
-
-# TODO (2.8): Crear el reloj del juego
-clock = ...
-
 
 def gameloop(screen):
+    # * Preparamos la escena de juego, cargando los elementos que se van a usar en el loop principal
+
+    # TODO (2.4): Añadir fondo del display
+    background_image = None
+
+    # TODO (2.6): Crear la instancia de jugador
+    player = None
+
+    # TODO (2.6): Crear los grupos de sprites
+    enemies = None
+    all_sprites = None
+
+    # TODO (2.7): Crear el generador de enemigos
+    ADDENEMY = None
+
+    # TODO (2.8): Crear el reloj del juego
+    clock = None
+
     running = True  # variable booleana para manejar el loop
 
     # * Loop principal del juego, todo lo que ocurre en el juego se hace dentro de este loop
     while running:
-        # TODO (2.4): Dibujar la imagen en la ventana
+        # TODO (2.4): Dibujar la imagen de fondo en la ventana
 
         # Iteramos sobre cada evento en la cola
         for event in pygame.event.get():

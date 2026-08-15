@@ -2,14 +2,14 @@ import pygame
 
 from scenes import basic_scene, game_scene
 
-""" Inicializamos PYGAME"""
+# Inicializamos pygame
 pygame.init()
 
-# 1.- Definimos las medidas de nuestra pantalla
+# Definimos las medidas de nuestra pantalla
 SCREEN_WIDTH = 1000
 SCREEN_HEIGHT = 700
 
-# 2.-  Creamos nuestro objeto pantalla
+# Creamos nuestro objeto pantalla
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
 # Aqui se ejecutaran las escenas del juego en orden

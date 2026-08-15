@@ -6,11 +6,10 @@ JorgePNG_scaled = pygame.transform.scale(JorgePNG, (80, 80))
 
 
 class Player(pygame.sprite.Sprite):
-    def __init__(self, screen, *groups):
+    def __init__(self, screen):
 
         # ? super().__init__() llama al constructor de la clase padre (Sprite) para inicializar el objeto correctamente
-        # ? Aprovechamos de pasarle los grupos a los que pertenece para que pygame lo maneje automáticamente
-        super().__init__(*groups)
+        super().__init__()
 
         self.image = JorgePNG_scaled
         self.rect = self.image.get_rect()
@@ -20,5 +19,5 @@ class Player(pygame.sprite.Sprite):
     def update(self, pressed_keys):
         # TODO (2.5): Mover a Jorge
 
-        # TODO: Mantener a Jorge en Pantalla
-        ...
+        # TODO (2.5): Mantener a Jorge en Pantalla
+        pass
