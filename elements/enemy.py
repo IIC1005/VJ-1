@@ -19,7 +19,6 @@ class Enemy(pygame.sprite.Sprite):
                 random.randint(0, screen.get_height()),
             )
         )
-        # La velocidad también es aleatoria
         self.speed = random.randint(3, 5)
 
     def update(self):
