@@ -15,9 +15,7 @@ class Enemy(pygame.sprite.Sprite):
         self.image = BUGpng_scaled
         self.rect = self.image.get_rect(
             center=(
-                # La coordenada [x] (posición horizontal) esta a la derecha de la pantalla, fuera de la vista
                 screen.get_width() + 100,
-                # La coordenada [y] (posición vertical) es aleatoria dentro de los margenes de la pantalla
                 random.randint(0, screen.get_height()),
             )
         )
