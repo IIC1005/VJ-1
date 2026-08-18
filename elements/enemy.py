@@ -9,7 +9,7 @@ BUGpng_scaled = pygame.transform.scale(BUGpng, (64, 64))
 class Enemy(pygame.sprite.Sprite):
     def __init__(self, screen):
 
-        # ? super().__init__() llama al constructor de la clase padre (Sprite) para inicializar el objeto correctamente
+        # ? super().__init__() inicializa la clase padre (Sprite)
         super().__init__()
 
         self.image = BUGpng_scaled
