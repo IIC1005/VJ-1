@@ -1,4 +1,5 @@
 import pygame
+from pygame.locals import K_DOWN, K_LEFT, K_RIGHT, K_UP
 
 JorgePNG = pygame.image.load("assets/JorgeVJ.png")
 JorgePNG_scaled = pygame.transform.scale(JorgePNG, (80, 80))

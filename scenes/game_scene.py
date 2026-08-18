@@ -11,6 +11,9 @@ if __name__ == "__main__":  # ! Solo para que no ejecutes este archivo
 import pygame
 from pygame.locals import K_ESCAPE, KEYDOWN, QUIT
 
+from elements.enemy import Enemy
+from elements.player import Player
+
 
 def gameloop(screen):
     # * Preparamos la escena de juego, cargando los elementos que se van a usar en el loop principal

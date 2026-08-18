@@ -1,6 +1,6 @@
 import pygame
 
-from scenes import basic_scene
+from scenes import basic_scene, game_scene
 
 # ? Inicializamos pygame
 pygame.init()
