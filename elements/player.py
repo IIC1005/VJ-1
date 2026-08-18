@@ -17,7 +17,7 @@ class Player(pygame.sprite.Sprite):
         self.screen_height = screen.get_height()
 
     def update(self, pressed_keys):
-        # TODO (2.5): Mover a Jorge
+        # TODO (2.6): Mover a Jorge
 
-        # TODO (2.5): Mantener a Jorge en Pantalla
+        # TODO (2.6): Mantener a Jorge en Pantalla
         pass

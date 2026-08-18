@@ -23,7 +23,7 @@ class Enemy(pygame.sprite.Sprite):
         self.speed = random.randint(3, 5)
 
     def update(self):
-        # TODO (2.5): Mover a los enemigos
+        # TODO (2.6): Mover a los enemigos
 
-        # TODO (2.5): Destruir a los enemigos
+        # TODO (2.6): Destruir a los enemigos
         pass
